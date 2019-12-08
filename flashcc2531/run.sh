@@ -11,7 +11,7 @@ if ! unzip CC2531_DEFAULT_20190608.zip; then echo "unzip failed" && exit 1; fi
 
 echo "backup firmware"
 ./cc_read save.hex
-if ! cp save.hex /backup/save.hex; then echo "could not backup firmware" && exit 1; fi
+if ! cp save.hex /backup/save_$(date +%s).hex; then echo "could not backup firmware" && exit 1; fi
 
 echo "erase"
 ./cc_erase
