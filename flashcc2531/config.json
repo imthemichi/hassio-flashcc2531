@@ -1,0 +1,18 @@
+{
+  "name": "flashcc2531",
+  "version": "11",
+  "slug": "flashcc2531",
+  "description": "Flash Zigbee USBStick CC2531",
+  "arch": ["armhf", "armv7", "aarch64"],
+  "startup": "before",
+  "boot": "manual",
+  "options": {},
+  "map": ["backup:rw"],
+  "devices": ["/dev/mem:/dev/mem:rw", "/dev/gpiomem:/dev/gpiomem:rw"],
+  "privileged": ["SYS_RAWIO"],
+  "gpio": "true",
+  "apparmor": "true",
+  "ports": {
+  },
+  "schema": {}
+}
