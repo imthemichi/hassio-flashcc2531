@@ -1,17 +1,17 @@
 #!/bin/bash
 echo "Startet"
 cd /flash_cc2531
-./cc_chipid | grep "ID = b524" || (echo "ChipID not found." && exit 1)
+if ! ./cc_chipid | grep "ID = b524"; then echo "ChipID not found." && exit 1; fi
 
 echo "Downloading firmware"
-wget https://github.com/Koenkk/Z-Stack-firmware/raw/master/coordinator/Z-Stack_Home_1.2/bin/default/CC2531_DEFAULT_20190608.zip || (echo "firmware not found" && exit 1)
+if ! wget https://github.com/Koenkk/Z-Stack-firmware/raw/master/coordinator/Z-Stack_Home_1.2/bin/default/CC2531_DEFAULT_20190608.zip; then echo "firmware not found" && exit 1; fi
 
 echo "unziping"
-unzip CC2531_DEFAULT_20190608.zip || (echo "unzip failed" && exit 1)
+if ! unzip CC2531_DEFAULT_20190608.zip; then echo "unzip failed" && exit 1; fi
 
 echo "backup firmware"
 ./cc_read save.hex
-cp save.hex /backup/save.hex || (echo "could not backup firmware" && exit 1)
+if ! cp save.hex /backup/save.hex; then echo "could not backup firmware" && exit 1; fi
 
 echo "erase"
 ./cc_erase

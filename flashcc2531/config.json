@@ -1,6 +1,6 @@
 {
   "name": "flashcc2531",
-  "version": "11",
+  "version": "12",
   "slug": "flashcc2531",
   "description": "Flash Zigbee USBStick CC2531",
   "arch": ["armhf", "armv7", "aarch64"],
