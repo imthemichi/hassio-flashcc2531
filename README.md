@@ -1,5 +1,5 @@
 # hassio-flashcc2531
-Hass.io addon for flashing the zigbee usbstick CC2531
+Hass.io addon for flashing the zigbee usbstick CC2531 with this [firmware](https://github.com/Koenkk/Z-Stack-firmware/raw/master/coordinator/Z-Stack_Home_1.2/bin/default/CC2531_DEFAULT_20190608.zip)
 
 It follows this good blog entry https://lemariva.com/blog/2019/07/zigbee-flashing-cc2531-using-raspberry-pi-without-cc-debugger and flashes the firmware needed for zigbee2mqtt (see https://www.zigbee2mqtt.io/getting_started/flashing_the_cc2531.html).
 
